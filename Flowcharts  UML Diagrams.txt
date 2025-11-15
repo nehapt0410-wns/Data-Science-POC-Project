@@ -1,0 +1,104 @@
+Flowcharts / UML Diagrams
+
+
+A. Website Blocking Flowchart
+
+
+
+          +---------------------+
+
+          |   Start Program     |
+
+          +---------------------+
+
+                    |
+
+                    v
+
+       +-------------------------+
+
+       |  User Chooses Option   |
+
+       +-------------------------+
+
+         /      |         \\
+
+        /       |          \\
+
+       v        v           v
+
+ +-----------+ +----------+ +----------------+
+
+ | Block     | | Unblock  | | Auto Block     |
+
+ | Website   | | Website  | | (Scrape + ML)  |
+
+ +-----------+ +----------+ +----------------+
+
+       |           |              |
+
+       v           v              v
+
+Modify hosts   Modify hosts   Scrape website
+
+ file              file        ↓
+
+                                 Analyze text
+
+                                 ↓
+
+                         Pattern detected?
+
+                         /         \\
+
+                        Yes        No
+
+                        |          |
+
+                        v          v
+
+                 Block website   Do nothing
+
+                         |
+
+                         v
+
+                      Done
+
+
+B. UML Use Case Diagram (Text Version)
+
+
+
+Actor: User
+
+
+
+Use Cases:
+
+ - Enter Website
+
+ - Block Website
+
+ - Unblock Website
+
+ - Auto Detect Patterns
+
+ - Scrape Website
+
+ - GUI Interaction
+
+
+
+User --> Block Website
+
+User --> Unblock Website
+
+User --> Auto-Detect Patterns
+
+Auto-Detect --> Scrape Website
+
+Auto-Detect --> Pattern Recognition Engine
+
+GUI --> Website Blocker Core
+

@@ -1,4 +1,4 @@
-Python Website Blocker with Pattern Detection
+## Python Website Blocker with Pattern Detection
 
 A simple Python-based website blocker that:
 
@@ -10,7 +10,7 @@ Runs in the terminal with a simple menu-based interface
 
 ⚠️ Warning: This script modifies your system hosts file. Use it carefully and only if you understand what it does.
 
-1. Features
+## 1. Features
 
 ✅ Block specific websites (e.g., facebook.com, instagram.com)
 
@@ -30,7 +30,7 @@ Missing hosts file
 
 Network / request failures
 
-2. How It Works (High-Level)
+## 2. How It Works (High-Level)
 
 Blocking websites
 
@@ -59,7 +59,7 @@ Checks for the presence of any keyword from a list (e.g. "gaming", "casino", "ad
 
 If a match is found → website is automatically blocked
 
-3. Project Structure
+## 3. Project Structure
 
 For a simple version, your project can look like this:
 
@@ -68,7 +68,7 @@ website_blocker/
 ├── website_blocker.py     # Your main Python script (contains main(), block, unblock, auto-block)
 └── README.md              # This documentation
 
-4. Prerequisites
+## 4. Prerequisites
 4.1. Python
 
 Python 3.8+ recommended
@@ -76,7 +76,7 @@ Python 3.8+ recommended
 Check version:
 
 python --version
-# or
+## or
 python3 --version
 
 4.2. Required Python Packages
@@ -90,17 +90,17 @@ beautifulsoup4 – for parsing HTML
 Install them via:
 
 pip install requests beautifulsoup4
-# or
+## or
 pip3 install requests beautifulsoup4
 
-5. Hosts File Configuration
+## 5. Hosts File Configuration
 
 In your script, you have a constant:
 
-HOSTS_PATH = r"C:\Windows\System32\drivers\etc\hosts"  # For Windows
-# HOSTS_PATH = "/etc/hosts"  # For Linux/Mac (uncomment when needed)
+HOSTS_PATH = r"C:\Windows\System32\drivers\etc\hosts"  ## For Windows
+## HOSTS_PATH = "/etc/hosts"  ## For Linux/Mac (uncomment when needed)
 
-5.1. For Windows
+## 5.1. For Windows
 
 Leave this line active:
 
@@ -113,11 +113,11 @@ Right-click Command Prompt / PowerShell / VS Code
 
 Select “Run as administrator”
 
-5.2. For Linux/Mac
+## 5.2. For Linux/Mac
 
 Comment Windows path and uncomment Unix path:
 
-# HOSTS_PATH = r"C:\Windows\System32\drivers\etc\hosts"
+## HOSTS_PATH = r"C:\Windows\System32\drivers\etc\hosts"
 HOSTS_PATH = "/etc/hosts"
 
 
@@ -125,12 +125,12 @@ Run script with sudo:
 
 sudo python3 website_blocker.py
 
-6. Running the Script
+## 6. Running the Script
 
 From the project folder:
 
 python website_blocker.py
-# or
+## or
 python3 website_blocker.py
 
 
@@ -143,7 +143,7 @@ You will see a menu like:
 4. Exit
 Enter choice:
 
-7. Usage Guide
+## 7. Usage Guide
 7.1. Option 1 – Block Website
 
 Choose option 1
@@ -223,7 +223,7 @@ If nothing harmful detected:
 [+] Scanning website: example.com
 [AUTO] No harmful pattern detected.
 
-8. Code Overview (Functions)
+## 8. Code Overview (Functions)
 8.1. block_website(website)
 
 Opens HOSTS_PATH in read+write mode
@@ -267,7 +267,7 @@ Takes user input and routes to appropriate function
 
 Exits when the user selects option 4
 
-9. Error Handling & Troubleshooting
+## 9. Error Handling & Troubleshooting
 9.1. PermissionError: Access denied to the hosts file.
 
 Cause: Script doesn’t have permission to edit hosts.
@@ -298,7 +298,7 @@ Try opening the site in a browser
 
 For internal networks, there may be firewalls
 
-10. Customization
+## 10. Customization
 10.1. Change Keywords for Pattern Detection
 
 In main():
@@ -318,7 +318,7 @@ keywords = [
 
 You can extend the project to log each action (block/unblock/auto-block) to a file like blocker.log.
 
-11. Security & Ethical Notes
+## 11. Security & Ethical Notes
 
 This tool affects only the local machine where it’s run.
 
@@ -330,13 +330,13 @@ Always keep a backup of your original hosts file before experimenting.
 
 Example backup:
 
-# Windows (PowerShell)
+## Windows (PowerShell)
 copy C:\Windows\System32\drivers\etc\hosts C:\Windows\System32\drivers\etc\hosts.backup
 
-# Linux/Mac
+## Linux/Mac
 sudo cp /etc/hosts /etc/hosts.backup
 
-12. Future Enhancements (Ideas)
+## 12. Future Enhancements (Ideas)
 
 GUI version using Tkinter or Streamlit
 
